@@ -99,12 +99,11 @@
 		89682BB522AAD081000F9584 /* CoreData-CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				89682BB622AAD081000F9584 /* AppDelegate.swift */,
-				89682BB822AAD081000F9584 /* ViewController.swift */,
-				89682BBA22AAD081000F9584 /* Main.storyboard */,
+				89682BE722AAE616000F9584 /* Support */,
+				89682BEA22AAE649000F9584 /* Model */,
+				89682BE822AAE636000F9584 /* View */,
+				89682BE922AAE640000F9584 /* Controller */,
 				89682BC022AAD081000F9584 /* Assets.xcassets */,
-				89682BC222AAD081000F9584 /* LaunchScreen.storyboard */,
-				89682BC522AAD081000F9584 /* Info.plist */,
 				89682BBD22AAD081000F9584 /* CoreData_CollectionView.xcdatamodeld */,
 			);
 			path = "CoreData-CollectionView";
@@ -126,6 +125,39 @@
 				89682BDB22AAD081000F9584 /* Info.plist */,
 			);
 			path = "CoreData-CollectionViewUITests";
+			sourceTree = "<group>";
+		};
+		89682BE722AAE616000F9584 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				89682BB622AAD081000F9584 /* AppDelegate.swift */,
+				89682BC522AAD081000F9584 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		89682BE822AAE636000F9584 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89682BBA22AAD081000F9584 /* Main.storyboard */,
+				89682BC222AAD081000F9584 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89682BE922AAE640000F9584 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89682BB822AAD081000F9584 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89682BEA22AAE649000F9584 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7WV6D6894;
-				INFOPLIST_FILE = "CoreData-CollectionView/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CoreData-CollectionView/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7WV6D6894;
-				INFOPLIST_FILE = "CoreData-CollectionView/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CoreData-CollectionView/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
