@@ -15,6 +15,9 @@
 		89682BC422AAD081000F9584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89682BC222AAD081000F9584 /* LaunchScreen.storyboard */; };
 		89682BCF22AAD081000F9584 /* CoreData_CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89682BCE22AAD081000F9584 /* CoreData_CollectionViewTests.swift */; };
 		89682BDA22AAD081000F9584 /* CoreData_CollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89682BD922AAD081000F9584 /* CoreData_CollectionViewUITests.swift */; };
+		89682BEC22AAF338000F9584 /* ItemCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89682BEB22AAF338000F9584 /* ItemCellCollectionViewCell.swift */; };
+		89682BEE22AAF65E000F9584 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89682BED22AAF65E000F9584 /* ItemViewController.swift */; };
+		89682BF022AAF678000F9584 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89682BEF22AAF678000F9584 /* IconViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		89682BD522AAD081000F9584 /* CoreData-CollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreData-CollectionViewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89682BD922AAD081000F9584 /* CoreData_CollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData_CollectionViewUITests.swift; sourceTree = "<group>"; };
 		89682BDB22AAD081000F9584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89682BEB22AAF338000F9584 /* ItemCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		89682BED22AAF65E000F9584 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemViewController.swift; path = "CoreData-CollectionView/Controller/ItemViewController.swift"; sourceTree = SOURCE_ROOT; };
+		89682BEF22AAF678000F9584 /* IconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IconViewController.swift; path = "CoreData-CollectionView/Controller/IconViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				89682BB822AAD081000F9584 /* ViewController.swift */,
+				89682BED22AAF65E000F9584 /* ItemViewController.swift */,
+				89682BEF22AAF678000F9584 /* IconViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 		89682BEA22AAE649000F9584 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89682BEB22AAF338000F9584 /* ItemCellCollectionViewCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,7 +302,10 @@
 			files = (
 				89682BB922AAD081000F9584 /* ViewController.swift in Sources */,
 				89682BB722AAD081000F9584 /* AppDelegate.swift in Sources */,
+				89682BEE22AAF65E000F9584 /* ItemViewController.swift in Sources */,
+				89682BEC22AAF338000F9584 /* ItemCellCollectionViewCell.swift in Sources */,
 				89682BBF22AAD081000F9584 /* CoreData_CollectionView.xcdatamodeld in Sources */,
+				89682BF022AAF678000F9584 /* IconViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
