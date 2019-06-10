@@ -14,6 +14,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var items: [NSManagedObject] = []
+    
+    
+    
+    
     var cellIdentifier = "ItemCell"
     
     override func viewDidLoad() {
@@ -37,13 +42,23 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return items.count + 1
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCellCollectionViewCell
         
-        return cell
+        if indexPath.row >= items.count {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddItemCell", for: indexPath) as! AddItemCollectionViewCell
+            cell.addItemImageView.image = #imageLiteral(resourceName: "Add Item")
+            return cell
+        } else {
+            let item = items[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCellCollectionViewCell
+            cell.itemImageView.image = item.value(forKey: "image") as? UIImage
+            return cell
+        }
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89021B9322AEC14600E2A825 /* AddItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89021B9222AEC14600E2A825 /* AddItemCollectionViewCell.swift */; };
 		89682BB722AAD081000F9584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89682BB622AAD081000F9584 /* AppDelegate.swift */; };
 		89682BB922AAD081000F9584 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89682BB822AAD081000F9584 /* ViewController.swift */; };
 		89682BBC22AAD081000F9584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89682BBA22AAD081000F9584 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89021B9222AEC14600E2A825 /* AddItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		89682BB322AAD081000F9584 /* CoreData-CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreData-CollectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89682BB622AAD081000F9584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89682BB822AAD081000F9584 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				89682BEB22AAF338000F9584 /* ItemCellCollectionViewCell.swift */,
+				89021B9222AEC14600E2A825 /* AddItemCollectionViewCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				89682BEE22AAF65E000F9584 /* ItemViewController.swift in Sources */,
 				89682BEC22AAF338000F9584 /* ItemCellCollectionViewCell.swift in Sources */,
 				89682BBF22AAD081000F9584 /* CoreData_CollectionView.xcdatamodeld in Sources */,
+				89021B9322AEC14600E2A825 /* AddItemCollectionViewCell.swift in Sources */,
 				89682BF022AAF678000F9584 /* IconViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
