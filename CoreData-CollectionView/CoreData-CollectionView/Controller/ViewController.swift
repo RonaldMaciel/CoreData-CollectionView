@@ -10,14 +10,9 @@ import CoreData
 import UIKit
 
 class ViewController: UIViewController {
-
-
     @IBOutlet weak var collectionView: UICollectionView!
     
     var items: [NSManagedObject] = []
-    
-    
-    
     
     var cellIdentifier = "ItemCell"
     
@@ -33,11 +28,11 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToItem" {
             guard let destination = segue.destination as? ItemViewController else { return }
-            
             // abc
         }
     }
 }
+
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     

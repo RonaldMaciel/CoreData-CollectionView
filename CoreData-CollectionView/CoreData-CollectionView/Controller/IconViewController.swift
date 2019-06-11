@@ -22,8 +22,12 @@ class IconViewController: UIViewController {
     @IBAction func confirmChangesAction(_ sender: UIButton) {
 //        if let itemViewController = presentingViewController as? ItemViewController {
 //
-//           itemViewController.selectIconButton.currentImage = iconImageView.image
+//           itemViewController.selectIconButton.imageView?.image = iconImageView.image
 //        }
+        if let itemViewController = presentingViewController as? ItemViewController {
+            let image = iconImageView.image
+            itemViewController.selectIconButton.setImage(image, for: .normal)
+        }
         
         self.navigationController?.popViewController(animated: true)
     }

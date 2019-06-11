@@ -111,7 +111,7 @@
                                 </state>
                                 <connections>
                                     <action selector="selectIconAction:" destination="esD-GT-rua" eventType="touchUpInside" id="3si-4h-BPy"/>
-                                    <segue destination="lTp-uq-sof" kind="show" id="5Aw-zI-cu5"/>
+                                    <segue destination="lTp-uq-sof" kind="show" identifier="goToIcon" id="5Aw-zI-cu5"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-hR-TI7">
@@ -221,15 +221,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153" id="1Xb-jT-g0u"/>
-                                    <constraint firstAttribute="width" constant="153" id="mU5-Nm-8AQ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQa-UM-4Gj" userLabel="ConfirmChangesButton">
-                                <rect key="frame" x="85" y="820" width="244" height="34"/>
+                                <rect key="frame" x="61" y="820" width="292" height="34"/>
                                 <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="2Xu-A4-gZe"/>
-                                    <constraint firstAttribute="width" constant="200" id="L7V-Uj-U6T"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Confirm Changes">
@@ -379,16 +377,16 @@
                             <constraint firstItem="83f-N4-DRm" firstAttribute="leading" secondItem="h8D-Z0-6OZ" secondAttribute="leading" constant="56" id="0UL-hh-YCs"/>
                             <constraint firstItem="h8M-ic-oIh" firstAttribute="leading" secondItem="Jgc-lX-7Xa" secondAttribute="leading" id="C2s-9U-avN"/>
                             <constraint firstItem="tQK-bc-70e" firstAttribute="top" secondItem="h8M-ic-oIh" secondAttribute="bottom" constant="20" id="KvB-IH-sJa"/>
-                            <constraint firstItem="h8D-Z0-6OZ" firstAttribute="trailing" secondItem="tQK-bc-70e" secondAttribute="trailing" constant="116" id="N3Y-c0-Cmb"/>
-                            <constraint firstItem="tQK-bc-70e" firstAttribute="leading" secondItem="h8D-Z0-6OZ" secondAttribute="leading" constant="116" id="PKy-OD-Her"/>
                             <constraint firstItem="SQa-UM-4Gj" firstAttribute="top" secondItem="83f-N4-DRm" secondAttribute="bottom" constant="8" id="PkU-Fj-CW8"/>
                             <constraint firstItem="h8M-ic-oIh" firstAttribute="bottom" secondItem="h8D-Z0-6OZ" secondAttribute="top" id="UZO-8N-mss"/>
-                            <constraint firstItem="SQa-UM-4Gj" firstAttribute="leading" secondItem="h8D-Z0-6OZ" secondAttribute="leading" constant="85" id="VRu-jU-eto"/>
                             <constraint firstItem="h8D-Z0-6OZ" firstAttribute="trailing" secondItem="83f-N4-DRm" secondAttribute="trailing" constant="61" id="XsA-Hm-0yD"/>
+                            <constraint firstItem="tQK-bc-70e" firstAttribute="centerX" secondItem="SQa-UM-4Gj" secondAttribute="centerX" id="aAR-vH-09P"/>
                             <constraint firstItem="h8D-Z0-6OZ" firstAttribute="bottom" secondItem="SQa-UM-4Gj" secondAttribute="bottom" constant="8" id="bFJ-d6-L6r"/>
+                            <constraint firstItem="SQa-UM-4Gj" firstAttribute="trailing" secondItem="83f-N4-DRm" secondAttribute="trailing" id="gB9-Kv-Zni"/>
                             <constraint firstItem="83f-N4-DRm" firstAttribute="top" secondItem="tQK-bc-70e" secondAttribute="bottom" constant="30" id="gd8-A2-J2e"/>
-                            <constraint firstItem="h8D-Z0-6OZ" firstAttribute="trailing" secondItem="SQa-UM-4Gj" secondAttribute="trailing" constant="85" id="s6k-CH-oUP"/>
+                            <constraint firstItem="SQa-UM-4Gj" firstAttribute="centerX" secondItem="Jgc-lX-7Xa" secondAttribute="centerX" id="rZ8-jz-dBM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h8M-ic-oIh" secondAttribute="trailing" constant="47" id="tgB-Gt-VPZ"/>
+                            <constraint firstItem="tQK-bc-70e" firstAttribute="leading" secondItem="h8D-Z0-6OZ" secondAttribute="leading" constant="116" id="u7h-iJ-lbG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h8D-Z0-6OZ"/>
                     </view>
