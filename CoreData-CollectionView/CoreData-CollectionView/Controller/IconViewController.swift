@@ -16,34 +16,16 @@ class IconViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        let itemViewController = ItemViewController()
-//        let image = iconImageView.image
-//        itemViewController.selectIconButton.setImage(image, for: .normal)
-//
-//    }
-
 
     @IBAction func confirmChangesAction(_ sender: UIButton) {
-        
-        
-        
         performSegue(withIdentifier: "unwindSegueToItemVC", sender: nil)
-        
-//        if let itemViewController = presentingViewController as? ItemViewController {
-//            let image = iconImageView.image
-//            itemViewController.selectIconButton.setImage(image, for: .normal)
-//        }
-        
-       
     }
     
     
     @IBAction func selectIcon(_ sender: UIButton) {
         iconImageView.image = sender.currentImage
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

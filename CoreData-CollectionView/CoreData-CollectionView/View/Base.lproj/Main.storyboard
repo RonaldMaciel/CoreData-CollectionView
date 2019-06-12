@@ -83,7 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bag" id="sFJ-cL-U0N"/>
                     <connections>
-                        <outlet property="collectionView" destination="6bx-JE-jRU" id="4m1-l9-che"/>
+                        <outlet property="collectionView" destination="6bx-JE-jRU" id="C38-o6-rbm"/>
                         <segue destination="esD-GT-rua" kind="show" identifier="goToItem" id="wSe-ez-PrB"/>
                     </connections>
                 </viewController>
@@ -192,12 +192,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Item" id="iNM-jN-CB3"/>
                     <connections>
-                        <outlet property="descriptionTextField" destination="KG4-ti-1jR" id="hIa-ek-4zc"/>
-                        <outlet property="nameTextField" destination="R4L-UB-7se" id="aKC-ra-ndL"/>
-                        <outlet property="quantityTextField" destination="YJZ-NS-40i" id="aXi-zH-apl"/>
+                        <outlet property="descriptionTextField" destination="KG4-ti-1jR" id="JJf-lQ-3Z6"/>
+                        <outlet property="nameTextField" destination="szl-oh-ahF" id="5jL-jo-aHv"/>
+                        <outlet property="quantityTextField" destination="YJZ-NS-40i" id="5GB-Zb-Q7l"/>
                         <outlet property="selectIconButton" destination="e2a-gh-2lL" id="KIa-ZU-FBu"/>
-                        <outlet property="typeTextField" destination="R4L-UB-7se" id="6Nv-FI-5Ot"/>
-                        <outlet property="valueTextField" destination="XCO-Nt-Mhl" id="gti-N6-IqX"/>
+                        <outlet property="typeTextField" destination="R4L-UB-7se" id="wjZ-vK-bxE"/>
+                        <outlet property="valueTextField" destination="XCO-Nt-Mhl" id="XiY-Gt-fGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiP-LN-WDf" userLabel="First Responder" sceneMemberID="firstResponder"/>

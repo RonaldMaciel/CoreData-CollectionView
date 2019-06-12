@@ -33,7 +33,11 @@ class ItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+        typeTextField.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+        valueTextField.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+        quantityTextField.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+        descriptionTextField.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -41,8 +45,6 @@ class ItemViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("hi")
-        
         selectIconButton.setImage(selectedImage, for: .normal)
     }
     
@@ -75,74 +77,37 @@ class ItemViewController: UIViewController {
 
         let item = NSManagedObject(entity: entity, insertInto: managedContext)
         
-        
 
         item.setValue(name, forKey: "name")
         item.setValue(type, forKey: "type")
         item.setValue(value, forKey: "value")
         item.setValue(quantity, forKey: "quantity")
         item.setValue(itemDescription, forKey: "itemDescription")
-//
-//        if let data = image.pngData() {
-//            //item.setValue(data, forKey: "image")
-//        }
+
+        if let data = image?.pngData() {
+            item.setValue(data, forKey: "image")
+        }
         
         
         let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-        let result = try? managedContext.fetch(fetch)
-        
-        for data in result as! [Item]  {
-            print(data.name)
-        }
 
 
         do {
-            print("kiiii")
             try? managedContext.save()
         } catch {
             print("Could not save")
         }
 
-//        printaImage()
         
     }
-//
-//    func printaImage() {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        let entity = NSEntityDescription.entity(forEntityName: "Item", in: managedContext)!
-//
-//        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-//
-//        do {
-//            let result = try? managedContext.fetch(fetch)
-//
-//            for data in result as! [NSManagedObject] {
-//                //managedContext.delete(data)
-//                print(data)
-//            }
-//
-//            //try managedContext.save()
-//        } catch {
-//            fatalError()
-//        }
-//
-//
-//
-//    }
-}
-
-
-extension ItemViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    
+    @objc func textFieldDidChange(sender: UITextField) {
         guard let valueString = valueTextField.text else { return }
         guard let quantityString = quantityTextField.text else { return }
         
-        switch textField {
+        switch sender {
         case nameTextField:
-            name = nameTextField.text ?? "raul"
+            name = nameTextField.text ?? ""
         case typeTextField:
             type = typeTextField.text ?? ""
         case valueTextField:
@@ -155,9 +120,8 @@ extension ItemViewController: UITextFieldDelegate {
             return
         }
     }
-
-
 }
+
 
 extension ItemViewController {
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
