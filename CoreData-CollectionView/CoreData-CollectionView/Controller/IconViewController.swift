@@ -17,19 +17,27 @@ class IconViewController: UIViewController {
 
     }
     
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        let itemViewController = ItemViewController()
+//        let image = iconImageView.image
+//        itemViewController.selectIconButton.setImage(image, for: .normal)
+//
+//    }
 
 
     @IBAction func confirmChangesAction(_ sender: UIButton) {
-//        if let itemViewController = presentingViewController as? ItemViewController {
-//
-//           itemViewController.selectIconButton.imageView?.image = iconImageView.image
-//        }
-        if let itemViewController = presentingViewController as? ItemViewController {
-            let image = iconImageView.image
-            itemViewController.selectIconButton.setImage(image, for: .normal)
-        }
         
-        self.navigationController?.popViewController(animated: true)
+        
+        
+        performSegue(withIdentifier: "unwindSegueToItemVC", sender: nil)
+        
+//        if let itemViewController = presentingViewController as? ItemViewController {
+//            let image = iconImageView.image
+//            itemViewController.selectIconButton.setImage(image, for: .normal)
+//        }
+        
+       
     }
     
     
@@ -37,4 +45,15 @@ class IconViewController: UIViewController {
         iconImageView.image = sender.currentImage
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "unwindSegueToItemVC") {
+            let viewController = segue.destination as? ItemViewController
+            viewController?.selectedImage = iconImageView.image
+            
+        } else {
+            fatalError()
+        }
+    }
 }
+

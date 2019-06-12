@@ -99,14 +99,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-gh-2lL" userLabel="selectIconButton">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-gh-2lL" userLabel="selectIconButton">
                                 <rect key="frame" x="111" y="490" width="192" height="153"/>
                                 <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153" id="PV1-rX-3nd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add Icon">
+                                <state key="normal">
                                     <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -393,9 +392,11 @@
                     <navigationItem key="navigationItem" title="Choose an icon" id="PU5-Wn-Nm3"/>
                     <connections>
                         <outlet property="iconImageView" destination="tQK-bc-70e" id="5N9-av-NqO"/>
+                        <segue destination="dUa-AZ-Ocm" kind="unwind" identifier="unwindSegueToItemVC" unwindAction="unwindToItemVCWithSegue:" id="GJC-PC-EIk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Myu-9F-soz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dUa-AZ-Ocm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2792.753623188406" y="116.51785714285714"/>
         </scene>
