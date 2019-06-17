@@ -93,6 +93,8 @@ class ItemViewController: UIViewController {
 
 
         do {
+            let result = try? managedContext.fetch(fetch) as? [Item]
+            print(result?.count)
             try? managedContext.save()
         } catch {
             print("Could not save")

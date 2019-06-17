@@ -46,6 +46,9 @@
                                             <constraint firstItem="YTE-uf-X1l" firstAttribute="leading" secondItem="iRh-A4-ptt" secondAttribute="leading" id="v8A-Tq-1NU"/>
                                             <constraint firstAttribute="trailing" secondItem="YTE-uf-X1l" secondAttribute="trailing" id="wns-Qj-N1q"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="YTE-uf-X1l" id="9nL-8n-2CX"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddItemCell" id="9rX-fh-pgZ" customClass="AddItemCollectionViewCell" customModule="CoreData_CollectionView" customModuleProvider="target">
                                         <rect key="frame" x="101.5" y="0.0" width="70" height="73"/>

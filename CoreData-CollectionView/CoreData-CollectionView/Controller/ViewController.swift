@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         do {
             let result = try? managedContext.fetch(fetch) as? [Item]
             items = result ?? []
-
         } catch {
             fatalError()
         }
@@ -67,22 +66,23 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if indexPath.row >= items.count {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddItemCell", for: indexPath) as! AddItemCollectionViewCell
             cell.addItemImageView.image = #imageLiteral(resourceName: "Add Item")
             return cell
+        } else {
+            let item = items[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCellCollectionViewCell
+            cell.itemImageView.image = item.value(forKey: "image") as? UIImage
+            return cell
         }
-        
-        let item = items[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCellCollectionViewCell
-        cell.itemImageView.image = item.value(forKey: "image") as? UIImage
-        return cell
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "goToItem", sender: nil)
     }
+    
     
 }
 
